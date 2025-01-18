@@ -11,16 +11,8 @@ import java.util.Map;
 @Service
 public class StudentService {
 
-    private final Map<Long, Student> students = new HashMap<>();
-    private Long count = 0L;
-
-    public Long getCount() {
-        return count;
-    }
-
-    public void setCount(Long count) {
-        this.count = count;
-    }
+    private final HashMap<Long, Student> students = new HashMap<>();
+    private long count = 0;
 
     public Student addStudent(Student student) {
         student.setId(count++);
